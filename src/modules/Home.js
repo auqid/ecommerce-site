@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Hero from '../../components/Hero/Home'
-import Product from '../../components/Product/Product'
-import Feature from '../../components/Feature/Feature'
+import Hero from '../components/Hero/Home'
+import Product from '../components/Products/Products'
+import Feature from '../components/Feature/Feature'
 
 const Home = () => {
   //using useState to create a initial empty Array and later on use it to save out fetched data.
