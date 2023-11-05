@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero/Home'
 import ProductCard from '../components/ProductCard/ProductsCard'
 import Categories from '../components/Categories/Categories'
+import Stats from '../components/Stats/Stats'
 
 
 const Home = () => {
@@ -33,6 +34,7 @@ useEffect(() => {
     {products.length>0 ?
     <ProductCard products={products}/>:
     <div className='flex flex-col text-center w-full mt-20'>Loading..</div>}
+    <Stats/>
       
      
     </div>

@@ -7,6 +7,7 @@ import {Routes,Route} from 'react-router-dom'
 import Product from './modules/Product/Product';
 import Products from './modules/Products/Products';
 import CategoryProducts from './modules/CategoryProducts/CategoryProducts';
+import Cart from './modules/Cart/Cart';
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/products" element={<div><Products/></div>}/>
       <Route path="/categories/:name" element={<CategoryProducts/>}/>
       <Route path="*" element={<div>404</div>}/>
+      <Route path="/cart" element={<Cart/>}/>
       </Routes>
       <Footer/>
       </>
