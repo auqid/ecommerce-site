@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Product = ({products}) => {
+const ProductCard = ({products}) => {
   return (
     <div>
 <section className="text-gray-400  body-font ">
@@ -9,12 +10,12 @@ const Product = ({products}) => {
       
       {/**product prop caught here and mapped on our component */}
       {
-        products.map((product)=>{
+        products?.map((product)=>{
           console.log(product,'product')
           const{id,title,price,description,category,image}= product;
           return(
-
-          <div  key={id} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md mb-5 cursor-pointer">
+           //linking to a product page using link to  
+          <Link to={`/products/${id}`} key={id} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md mb-5 cursor-pointer">
         <a className="block relative h-48 rounded overflow-hidden">
           <img alt={id} className="object-contain object-center w-full h-full block"src={image}/>
         </a>
@@ -23,7 +24,7 @@ const Product = ({products}) => {
           <h2 className="text-black title-font text-lg font-medium">{title}</h2>
           <p className="mt-1 text-black">${price}</p>
         </div>
-      </div>
+      </Link>
       )
 
         })
@@ -38,4 +39,4 @@ const Product = ({products}) => {
   )
 }
 
-export default Product
+export default ProductCard
