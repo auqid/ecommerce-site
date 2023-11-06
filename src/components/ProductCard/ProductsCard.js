@@ -11,7 +11,7 @@ const ProductCard = ({products}) => {
       {/**product prop caught here and mapped on our component */}
       {
         products?.map((product)=>{
-          console.log(product,'product')
+          
           const{id,title,price,description,category,image}= product;
           return(
            //linking to a product page using link to  
