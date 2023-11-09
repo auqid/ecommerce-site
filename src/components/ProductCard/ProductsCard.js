@@ -12,7 +12,7 @@ const ProductCard = ({products}) => {
       {
         products?.map((product)=>{
           
-          const{id,title,price,description,category,image}= product;
+          const{id,title,price,category,image}= product;
           return(
            //linking to a product page using link to  
           <Link to={`/products/${id}`} key={id} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md mb-5 cursor-pointer">

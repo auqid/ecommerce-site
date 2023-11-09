@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const FeatureCard = ({cards}) => {
-
+console.log(cards)
 
     
   return (
@@ -24,7 +24,7 @@ const FeatureCard = ({cards}) => {
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
             </div>
-            <h2 className="text-gray-900 text-lg title-font font-medium capitalize  ">{card ||'Example Card'}</h2>
+            <h2  className="text-gray-900 text-lg title-font font-medium capitalize  ">{card ||'Example Card'}</h2>
           </div>
         </div>
       </Link>
