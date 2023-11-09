@@ -14,8 +14,7 @@ const Product = () => {
 
     const cartHandler = ()=>{
       dispatch(cartActions.addToCart(product))
-      console.log(product.id)
-      console.log(cart)
+      
      
     }
 
@@ -105,7 +104,7 @@ const Product = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <span className="title-font font-medium text-2xl text-gray-900">{product?.price}</span>
+          <span className="title-font font-medium text-2xl text-gray-900">${product?.price}</span>
           <div className='flex justify-between m-2'>
           <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 mr-2 focus:outline-none hover:bg-indigo-600 rounded">Buy it now</button>
           <button  onClick={cartHandler} className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add to cart</button>

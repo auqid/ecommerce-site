@@ -6,18 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  
+  <Auth0Provider
+    domain="dev-y41l8ac2beb8jh7b.us.auth0.com"
+    clientId="Mf7RIYgHK0rqPHbSDC0rnpIz2xDCqtNQ"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
   <BrowserRouter>
-  <React.StrictMode>
   <Provider store={store}>
     <App />
     </Provider>
-  </React.StrictMode>
   </BrowserRouter>
+  </Auth0Provider>
   
 );
 
